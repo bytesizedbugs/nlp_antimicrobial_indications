@@ -14,4 +14,4 @@ git clone https://github.com/bytesizedbugs/nlp_antimicrobial_indications.git
 ```
 
 # Acknowledgements
-# Thank you to pharmacy staff at James Cook University Hospital.
+Thank you to pharmacy staff at James Cook University Hospital.
