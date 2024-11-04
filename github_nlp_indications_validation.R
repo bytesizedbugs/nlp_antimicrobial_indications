@@ -33,14 +33,12 @@
 # class_ie: Binary (1 or 0) - Infective endocarditis.
 # class_bacline: Binary (1 or 0) - Bacteraemia or line infection.
 
-
-
 ############################################################
 # Load necessary libraries
 ############################################################
 # This section loads  the required libraries for the analysis.
 
-required_packages <- c("readxl", "stringdist", "tm", "caret",  "pROC")
+required_packages <- c("readxl", "stringdist", "tm", "caret",  "pROC", "tictoc")
 
 for (pkg in required_packages) {
   if (!requireNamespace(pkg, quietly = TRUE)) {
@@ -53,6 +51,10 @@ library(stringdist) #spell check string distance function
 library(tm) #text mining functions
 library(caret) #model package
 library(pROC) #ROC curves
+library(tictoc) #optional timer function
+
+#start timer
+tic()
 
 #other packages used in model development
 # library(stringr)
@@ -249,8 +251,8 @@ print(nlpsensspec_new)
 # Print the dataframe with original text, predictions, and actual values
 print(predictions_df_new)
 
-
-
+#end timer
+toc()
 
 
 
@@ -272,3 +274,4 @@ mismatch_df_subset <- mismatch_df[, c("INDICATION", pred_col, actual_col)]
 
 # Display the result
 mismatch_df_subset
+
