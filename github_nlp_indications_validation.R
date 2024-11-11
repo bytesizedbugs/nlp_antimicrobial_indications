@@ -73,7 +73,9 @@ tic()
 #Load the dataset to be tested as d_new
 ############################################################
 
+#To load the validation dataset:
 d_new <- read_excel("jan24_internalvalidation.xlsx")
+
 
 ############################################################
 #read in the models
@@ -255,9 +257,7 @@ print(predictions_df_new)
 toc()
 
 
-
-
-# To investigate misclassified cases, substitute example "genit" with the model of interest 
+# To investigate misclassified cases, provide the model of interest as colname
 colname <- "genit"
 
 # Construct the column names using the defined base name
