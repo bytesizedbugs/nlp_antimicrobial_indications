@@ -13,5 +13,23 @@ This project aims to use R to apply NLP to analyse free-text antimicrobial presc
 git clone https://github.com/bytesizedbugs/nlp_antimicrobial_indications.git
 ```
 
+# Files
+nlp_sampledata is a sample dataset to illustrate how the manually labelled data look
+This data structure is also described in nlp_training_main.R
+
+The trained models are stored in a list (freetext_nlp_models.rds)
+
+# Scripts
+To run the models on the sample data:
+Run nlp_example.R
+
+To train models:
+Ensure data is in the format described in nlp_training_main.R and stored in the working directory
+Run nlp_training_main.R
+This calls nlp_training_setup.R, nlp_training_preprocessing.R, (nlp_training_trainmodel.R), nlp_training_applymodel.R, and nlp_trainin_eval.R.
+(nlp_training_trainmodel.R is by default commented out because it takes time to train new models. Instead the trained models can be loaded in.)
+
+
+
 # Acknowledgements
 Thank you to pharmacy staff at James Cook University Hospital.
